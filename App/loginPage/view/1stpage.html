@@ -1,0 +1,51 @@
+ <form name="myForm">
+    <div id="class">
+      <p id="para">Sign in to continue</p>
+        <div id="class1">
+          <p>Login</p>
+             <tr>
+               <label>First Name:</label>
+                  <td><input type="text" id="fname" name="fname"  ng-model="user.firstname"  placeholder="enter firstname"  required/>
+                      <div ng-messages="myForm.fname.$error">
+                        <div ng-message="required">This field is required</div>
+                      </div>
+                  </td><br>
+
+               <label>Last Name:</label>
+                  <td><input type="text" id="lastname" name="lname" ng-model="user.second" placeholder="enter lastname" required/>
+                     <div ng-messages="myForm.lname.$error">
+                       <div ng-message="required">This field is required</div>
+                     </div>
+                  </td><br>
+
+               <label>Email id:</label>
+                  <td><input type="email" id="email" name="email"  ng-model="emailid"  placeholder="enter email id" required="required"  autofocus="autofocus">
+                         <div ng-messages="myForm.email.$error">
+                               <div ng-message="required">This field is required</div>
+                               <div ng-message="email">Your email address is invalid</div>
+                         </div>
+                  </td>
+                  <td>Country:<select ng-model="selectedName" ng-options="x.country for x in country" required/></select>
+                        State:<select ng-model="selectedName1" ng-options="z for (y,z) in selectedName.states" required/></select>
+                  </td>
+
+                  <td> <br>
+                    <button class="button" type="submit" ng-disabled="myForm.$invalid" ng-click="check(user)">sign up </button>
+                    <button class="button" data-dismiss="modal" ng-click="cancel()" >cancel</button> <br>  </br>
+
+                  </td>
+             </tr>
+        </div>
+    </div>
+ </form>
+                 <!--    </div>-->
+                   <!-- <div class="modal-footer">
+                        <button type="button" class="btn btn-default"
+                                data-dismiss="modal">Close</button>
+                    </div>-->
+                <!--  </div>-->
+
+
+
+
+

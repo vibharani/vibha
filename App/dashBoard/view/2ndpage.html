@@ -1,0 +1,46 @@
+<div>
+		   <h3 id="FirstName" name="FirstName" ng-model="FirstName">welcome  <b>{{FirstName.firstname+" "+FirstName.second}}</b></h3>
+
+	<div class="dropdown" style="float: left;">
+		<button class="dropbtn">About</button>
+		<div class="dropdown-content" style="left: 0;">
+			<a href="#member">Member ship</a>
+            <a href="#login">login</a>
+			<a href="#About">About us</a>
+		</div>
+	</div>
+
+	<div class="dropdown">
+		<button class="dropbtn">Collections</button>
+		<br>   <br>
+		<div class="dropdown-content">
+			<a href="#movie">Movie</a> <a href="#songs">Songs</a> <a
+				href="#videos">Videos</a>
+		</div>
+	</div> <br>
+    <input id="input" type="text"  ng-model="name" placeholder="search here">  <!-- ng-keypress-->
+	<table>
+
+		<thead>
+			<tr>
+				<th>id</th>
+				<th>song</th>
+				<th>size</th>
+				<th>movie</th>
+				<th>actor</th>
+				<th>release Date</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="x in data">
+				<td>{{x.id}}</td>
+				<td>{{x.song}}</td>
+				<td>{{x.size}}</td>
+				<td>{{x.movie}}</td>
+				<td>{{x.actor}}</td>
+				<td>{{x.releaseDate}}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+   <!-- <script src="dashBoard/controller/dashBoard.js"></script>-->
